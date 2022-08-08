@@ -56,7 +56,7 @@ const loadSyntaxHighlight = async (language) => {
 	}
 }
 
-const createEditor = ({ content, onCreate, onUpdate, extensions, enableRichEditing, session, relativePath }) => {
+const createEditor = ({ content, onCreate, onUpdate = () => {}, extensions, enableRichEditing, session }) => {
 	let richEditingExtensions = []
 	if (enableRichEditing) {
 		richEditingExtensions = [
